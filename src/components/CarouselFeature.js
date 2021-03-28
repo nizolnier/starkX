@@ -7,6 +7,7 @@ import earth from '../assets/earth.jpg'
 import galaxy from '../assets/galaxy.jpg'
 import meteorites from '../assets/meteorites.jpg'
 import styled from 'styled-components'
+import { goToTrips } from '../router/coordinator'
 
 const Title = styled.h1`
   text-shadow: 2px 1px 2px rgba(58, 58, 58, 1);
@@ -15,9 +16,6 @@ const Title = styled.h1`
 function CarouselFeature() {
   const history = useHistory()
 
-  const goToTrips = () => {
-    history.push("/trips")
-  }
 
   return (
     <div>
@@ -27,15 +25,15 @@ function CarouselFeature() {
             <img className="d-block w-100" src={galaxy} alt="First slide" />
             <Carousel.Caption>
               <Title>The galaxy won't be that far away anymore</Title>
-              <Button className="w-50" onClick={goToTrips}onClick={goToTrips} size="lg" variant="light">SEE TRIPS</Button>
+              <Button className="w-50" onClick={() => goToTrips(history)} size="lg" variant="light">SEE TRIPS</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={meteorites} alt="Second slide" />
 
             <Carousel.Caption>
-              <Title>Tired of the dry spell? How about seeing a meteor shower?</Title>
-              <Button className="w-50" onClick={goToTrips} size="lg" onClick={goToTrips} variant="light">SEE TRIPS</Button>
+              <Title>Tired of the dry spell? How about a meteor shower?</Title>
+              <Button className="w-50" onClick={() => goToTrips(history)} size="lg" variant="light">SEE TRIPS</Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -43,7 +41,7 @@ function CarouselFeature() {
 
             <Carousel.Caption>
               <Title>I can show you the.... GALAXY!</Title>
-              <Button className="w-50" onClick={goToTrips} size="lg" onClick={goToTrips} variant="light">SEE TRIPS</Button>
+              <Button className="w-50" onClick={() => goToTrips(history)} size="lg" variant="light">SEE TRIPS</Button>
               
             </Carousel.Caption>
           </Carousel.Item>

@@ -3,13 +3,10 @@ import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
 import { Button, MuiThemeProvider } from '@material-ui/core'
 import {myTheme, CardPublic} from './styles'
+import { goToApply } from '../router/coordinator';
 
 function TripCard(props) {
   const history = useHistory()
-
-  const goToApply = () => {
-    history.push("/apply")
-  }
 
   return (
     <CardPublic>
@@ -23,7 +20,7 @@ function TripCard(props) {
           </Card.Text>
           <footer>
             <MuiThemeProvider theme={myTheme}>
-              <Button variant="contained" color="secondary" onClick={goToApply}>APPLY</Button>
+              <Button variant="contained" color="secondary" onClick={() => goToApply(history)}>APPLY</Button>
             </MuiThemeProvider>
           </footer>
         </Card.Body>

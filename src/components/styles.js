@@ -1,34 +1,36 @@
-import {makeStyles} from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import styled, { keyframes } from 'styled-components'
-import {Typography, createMuiTheme} from '@material-ui/core'
+import { Typography, createMuiTheme } from '@material-ui/core'
 
 export const useStyles = makeStyles({
-    logout: {
-      color: "white",
-      background: 'linear-gradient(45deg, #F61B1B 100%, #FF8E53 90%)',
-    },
-    normal: {
-      color: "white",
-    },
-    aprove: {
-      color: "white",
-      background: 'linear-gradient(45deg,#62bc82 100%, #FF8E53 90%)',
-    },
-    donot: {
-      color: "white",
-      background: 'linear-gradient(45deg, #F61B1B 100%, #FF8E53 90%)',
-    },
-    pos: {
-      marginBottom: 12,
-    },
-    button: {
-      color: "white",
-      fontSize: "1.2rem"
-    },
-    apply: {
-      width: "20%",
-      marginLeft: "2em"
-    }
+  logout: {
+    color: "white",
+    background: 'linear-gradient(45deg, #F61B1B 100%, #FF8E53 90%)',
+  },
+  normal: {
+    color: "white",
+  },
+  approve: {
+    color: "white",
+    background: 'linear-gradient(45deg,#62bc82 100%, #FF8E53 90%)',
+  },
+  donot: {
+    color: "white",
+    background: 'linear-gradient(45deg, #F61B1B 100%, #FF8E53 90%)',
+  },
+  pos: {
+    marginBottom: 12,
+  },
+  button: {
+    color: "white",
+    fontSize: "1.2rem",
+    paddingLeft: "1em",
+    paddingBottom: "0.2em"
+  },
+  apply: {
+    width: "20%",
+    marginLeft: "2em"
+  }
 })
 
 export const Header = styled.div`
@@ -163,4 +165,7 @@ grid-template-rows: 1fr;
 grid-gap: 2.5em;
 padding: 1em;
 margin-bottom: 8em;
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+  grid-template-columns: 1fr;
+  }
 `

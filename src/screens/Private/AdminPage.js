@@ -9,32 +9,22 @@ import Loading from '../../components/Loading';
 import axios from 'axios'
 import {baseUrl} from '../../constants/urls'
 import {GridContainer, Line, CenterContainer, BlackContainer, useStyles} from '../styles'
+import { goToCreateTrip } from '../../router/coordinator';
 
 
 function AdminPage() {
   const classes = useStyles()
-  
-  // aqui ta a função de get trips
+
   const [trips, loaded] = useTripsList()
   useProtectedPage()
 
   const history = useHistory();
 
-  // função pra ir pros detalhes com base no id
-  const goToDetails = (id) => {
-    history.push(`/admin/trips/detail/${id}`);
-  };
 
-  // função pra ir pra criar uma trip
-  const goToCreationMode = () => {
-    history.push("/admin/trips/create-trip")
-  }
-
-  // função pra deletar trips que força o admin a criar outra pois ele que lute
   const deleteTrip = (id) => {
     axios.delete(`${baseUrl}/trips/${id}`).then((response) => {
-      window.alert("Trip deleted! Now let's create another one")
-      history.push("/admin/trips/create-trip")
+      window.alert("Trip deleted!")
+      window.location.reload(false)
     }).catch((err) => {
       console.log(err)
     })
@@ -43,17 +33,16 @@ function AdminPage() {
   return (
     <div>
       <NavBarAdmin />
-
       <BlackContainer>
         <Typography className={classes.welcome} variant="h3">Welcome!</Typography>
         <CenterContainer>
           <Line></Line>
           <Typography variant="h5">Trips</Typography>
-          <Button variant="contained" className={classes.button} onClick={goToCreationMode}>Create more trips</Button>
+          <Button variant="contained" className={classes.button} onClick={() => goToCreateTrip(history)}>Create more trips</Button>
         </CenterContainer>
         {loaded? <GridContainer>
           {trips.map((item) => {
-            return <TripCard deleteTrip={deleteTrip} goToDetails={goToDetails} date={item.date} planet={item.planet} description={item.description} id={item.id} name={item.name} />
+            return <TripCard deleteTrip={deleteTrip} date={item.date} planet={item.planet} description={item.description} id={item.id} name={item.name} />
           })}
         </GridContainer> : <CenterContainer><Loading /></CenterContainer> }
       </BlackContainer>

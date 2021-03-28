@@ -5,26 +5,10 @@ import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
 import { useHistory } from 'react-router-dom'
 import {FooterContainer, FirstContainer, SecondContainer, SocialLogo, Logo, SectionMedias, SectionLogo, Bold, BoldLink, Copyright, Link, Text} from './styles'
+import { goToAboutUs, goToApply, goToError, goToTrips } from "../../router/coordinator";
 
 function Footer() {
-
   const history = useHistory()
-
-  const goToAboutUs = () => {
-    history.push("/about")
-  }
-
-  const goToApply = () => {
-    history.push("/apply")
-  }
-
-  const goToTrips = () => {
-    history.push("/trips")
-  }
-
-  const goToError = () => {
-    history.push("/error")
-  }
 
   return (
     <FooterContainer>
@@ -42,7 +26,7 @@ function Footer() {
               alt="facebook"
             />
           </a>
-          <a href="https://twitter.com/login?lang=pt" target="_blank">
+          <a href="https://twitter.com/" target="_blank">
             <SocialLogo
               src={twitter}
               alt="twitter"
@@ -67,16 +51,16 @@ function Footer() {
           <Text>suggestions@starkx.com</Text>
         </section>
         <section>
-          <BoldLink onClick={goToAboutUs}>About us</BoldLink>
-          <BoldLink onClick={goToApply}>Apply</BoldLink>
-          <BoldLink onClick={goToTrips}>Trips</BoldLink>
-          <BoldLink onClick={goToError}>Error</BoldLink>
+          <BoldLink onClick={() => goToAboutUs(history)}>About us</BoldLink>
+          <BoldLink onClick={() => goToApply(history)}>Apply</BoldLink>
+          <BoldLink onClick={() => goToTrips(history)}>Trips</BoldLink>
+          <BoldLink onClick={() => goToError(history)}>Error</BoldLink>
         </section>
 
       </SecondContainer>
       <Copyright><Link >Developed by Nicole Zolnier</Link></Copyright>
     </FooterContainer>
-  );
+  )
 
 }
 

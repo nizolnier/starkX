@@ -3,42 +3,23 @@ import { useHistory } from 'react-router-dom'
 import logo from '../assets/white-starkx.svg'
 import { Button, MuiThemeProvider } from '@material-ui/core'
 import {myTheme, Header, StarkxLogo} from './styles'
+import { goToAboutUs, goToApply, goToTrips, goToLogin, goToHome } from '../router/coordinator'
 
 function NavBar() {
   const history = useHistory()
 
-  const goToHome = () => {
-    history.push("/")
-  }
-  
-  const goToAboutUs = () => {
-    history.push("/about")
-  }
-
-  const goToLogin = () => {
-    history.push("/login")
-  }
-
-  const goToApply = () => {
-    history.push("/apply")
-  }
-
-  const goToTrips = () => {
-    history.push("/trips")
-  }
-
   return (
     <Header>
-      <StarkxLogo src={logo} onClick={goToHome} />
+      <StarkxLogo src={logo} onClick={() => goToHome(history)} />
       <MuiThemeProvider theme={myTheme}>
-        <Button color="primary" onClick={goToAboutUs}>About Us</Button>
-        <Button color="primary" onClick={goToApply}>Apply</Button>
-        <Button color="primary" onClick={goToTrips}>Trips</Button>
-        <Button color="secondary" variant="contained" onClick={goToLogin}>Admin</Button>
+        <Button color="primary" onClick={() => goToAboutUs(history)}>About Us</Button>
+        <Button color="primary" onClick={() => goToApply(history)}>Apply</Button>
+        <Button color="primary" onClick={() => goToTrips(history)}>Trips</Button>
+        <Button color="secondary" variant="contained" onClick={() => goToLogin(history)}>Admin</Button>
       </MuiThemeProvider>
 
     </Header>
-  );
+  )
 }
 
 export default NavBar;

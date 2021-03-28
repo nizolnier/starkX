@@ -14,7 +14,6 @@ function LoginPage() {
   const { form, onChange, reset } = useForm({ email: "", password: "" });
 
 
-  // função pra fazer login maneiro
   const login = (e) => {
     e.preventDefault()
 
@@ -28,7 +27,7 @@ function LoginPage() {
       localStorage.setItem("token", res.data.token)
       history.push("/admin")
     }).catch((err) => {
-      window.alert("Your password or email is incorrect")
+      window.alert("Incorrect password or email")
       console.log(err)
     })
   }
@@ -38,8 +37,6 @@ function LoginPage() {
       <NavBar />
       <MainContainer>
         <Title variant="h3">Log in</Title>
-
-
         <LoginForm onSubmit={login}>
         
           <TextField variant="outlined" label="Email" type={"email"} onChange={onChange} value={form.email} name="email" required />
@@ -49,11 +46,9 @@ function LoginPage() {
           </MuiThemeProvider>
         </LoginForm>
 
-
       </MainContainer>
 
       <Footer />
-
     </div>
   );
 }

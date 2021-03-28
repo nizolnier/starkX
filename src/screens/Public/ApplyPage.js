@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom'
 
 function ApplyPage() {
   const history = useHistory()
-  const [trips, loaded] = useTripsList()
+  const [trips] = useTripsList()
   const { form, onChange, reset } = useForm({ name: "", age: "", reason: "", profession: "", country: "", tripId: "" })
   const [countries, setCountries] = useState()
 
@@ -19,14 +19,12 @@ function ApplyPage() {
     getCountries()
   }, [])
 
-  // função de pegar os paises de uma api doida
   const getCountries = () => {
     axios.get("https://restcountries.eu/rest/v2/all").then((res) => {
       setCountries(res.data)
     })
   }
 
-  // função pra aplicar pra uma viagem
   const applyToTrip = (e) => {
     e.preventDefault()
 

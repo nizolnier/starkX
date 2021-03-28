@@ -1,5 +1,3 @@
-
-// só pra minha referencia, não tive tempo de usa-las com consts :/
 // #F61B1B
 // #DC1405
 // #BA0000
