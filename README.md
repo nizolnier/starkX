@@ -1,12 +1,12 @@
 <h1 align="center">
   <br>
-  <a href="link"><img src="./src/assets/white-starkx.svg" style="background-color:black;padding:0.5em;" alt="logo astromatch" width="400"></a>
+  <a href="https://starkx-nz.surge.sh/"><img src="./src/assets/white-starkx.svg" style="background-color:black;padding:0.5em;" alt="logo astromatch" width="400"></a>
 </h1>
 
 <a id="en-readme"></a>
 ## English | [Português](#pt-readme)
 
-[StarkX](link) is a front-end project developed at Labenu's bootcamp and it is based on SpaceX.
+[StarkX](https://starkx-nz.surge.sh/) is a front-end project developed at Labenu's bootcamp and it is based on SpaceX.
 
 Your next adventure is just one planet away! Apply to fun trips in Stark's new company. If you are an administrator, you can create trips across the galaxy and decide what are the best candidates!
 
@@ -52,7 +52,7 @@ senha: 123456
 <a id="pt-readme"></a>
 ## [English](#en-readme) | Português
 
-[StarkX](link) é um projeto front-end feito no bootcamp da Labenu e baseado no StarkX.
+[StarkX](https://starkx-nz.surge.sh/) é um projeto front-end feito no bootcamp da Labenu e baseado no StarkX.
 
 Sua próxima aventura está a apenas um planeta de distância! Inscreva-se para viagens divertidas na nova empresa do Stark. Se você é um administrador, você pode criar viagens pela galáxia e decidir quais são os melhores candidatos!
 
