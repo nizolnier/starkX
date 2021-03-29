@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
-import Buttons from './Buttons'
-import { baseUrl} from '../../constants/urls'
+import Buttons from './Buttons/Buttons'
+import { baseUrl } from '../../constants/urls'
 import Card from 'react-bootstrap/Card'
 
 function CandidateCard(props) {
@@ -12,9 +12,9 @@ function CandidateCard(props) {
 
     axios.put(`${baseUrl}/trips/${props.tripId}/candidates/${props.candidateId}/decide`, body, {
       headers: {
-          auth: localStorage.getItem("token")
+        auth: localStorage.getItem("token")
       }
-  }).then((res) => {
+    }).then((res) => {
       props.getTripDetails()
     }).catch(err => {
       console.log(err)
