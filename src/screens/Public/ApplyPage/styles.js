@@ -18,7 +18,11 @@ export const ApplyForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-    width: 30vw;
-    background-color: white;
-    border-radius: 5px;
+  width: 30vw;
+  background-color: white;
+  border-radius: 5px;
+  @media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+    width: 90vw;
+  
+  }
 `

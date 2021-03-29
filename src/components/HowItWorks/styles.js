@@ -15,4 +15,8 @@ export const CardsGrid = styled.div`
   justify-content: space-around;
   padding: 4em;
   padding-bottom: 6em;
+  @media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+    flex-direction: column;
+    align-items: center;
+    }
 `

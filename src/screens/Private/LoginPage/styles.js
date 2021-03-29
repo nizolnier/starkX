@@ -15,6 +15,10 @@ gap: 1em;
 width: 30vw;
 background-color: white;
 border-radius: 5px;
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+  width: 90vw;
+
+}
 `
 
 export const MainContainer = styled.div`

@@ -7,6 +7,9 @@ export const GridContainer = styled.div`
   gap: 3em;
   padding: 1em;
   padding-bottom: 0;
+  @media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+    grid-template-columns: 1fr;
+    }
 `
 export const Line = styled.div`
   width: 60px;
@@ -26,5 +29,6 @@ export const BlackContainer = styled.div`
   background-color: black;
   color: white;
   width: auto;
-  height: 120vh;
+  height: auto;
+  padding-bottom: 1em;
 `

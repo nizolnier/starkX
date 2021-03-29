@@ -11,4 +11,7 @@ export const Header = styled.div`
 export const StarkxLogo = styled.img`
 width: 15%;
 cursor: pointer;
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+  width: 22%;
+  }
 `

@@ -38,4 +38,7 @@ color: white;
 margin: 0.2em;
 padding-right: 20em;
 padding-bottom: 1.5em;
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+  padding-right: 0.2em;
+  }
 `

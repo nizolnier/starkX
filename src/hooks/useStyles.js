@@ -27,8 +27,9 @@ export const useStyles = makeStyles({
     paddingBottom: "0.2em"
   },
   apply: {
-    width: "20%",
-    marginLeft: "2em"
+    width: "50%",
+    marginLeft: "2em",
+    padding: "1em"
   },
   create: {
     color: "white",

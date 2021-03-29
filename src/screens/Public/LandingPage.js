@@ -1,6 +1,5 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import CarouselFeature from '../../components/CarouselFeature'
+import CarouselFeature from '../../components/CarouselFeature/CarouselFeature'
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
 import Slogan from '../../components/Slogan/Slogan'
 
@@ -10,7 +9,6 @@ function LandingPage() {
       <CarouselFeature />
       <Slogan />
       <HowItWorks />
-      <Footer />
     </div>
   );
 }
