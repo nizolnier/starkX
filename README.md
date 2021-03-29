@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://starkx-nz.surge.sh/"><img src="./src/assets/starx-readme.svg" alt="logo starkx" width="400" /></a>
+  <a href="https://starkx-nz.surge.sh/"><img src="./src/assets/starx-readme.svg" alt="logo starkx" width="500" /></a>
 </h1>
 
 <a id="en-readme"></a>
