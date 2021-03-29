@@ -1,13 +1,12 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import NavBar from '../../components/NavBar'
-import { useForm } from '../../hooks/useForm'
+import { useForm } from '../../../hooks/useForm'
 import axios from 'axios'
-import { baseUrl } from '../../constants/urls'
+import { baseUrl } from '../../../constants/urls'
 import { TextField, Button, MuiThemeProvider } from '@material-ui/core'
-import Footer from '../../components/Footer/Footer'
-import {Title, MainContainer, LoginForm, myTheme } from '../styles'
-
+import Footer from '../../../components/Footer/Footer'
+import { Title, MainContainer, LoginForm } from './styles'
+import { myTheme } from '../../../hooks/useStyles'
 
 function LoginPage() {
   const history = useHistory()
@@ -34,11 +33,10 @@ function LoginPage() {
 
   return (
     <div>
-      <NavBar />
       <MainContainer>
         <Title variant="h3">Log in</Title>
         <LoginForm onSubmit={login}>
-        
+
           <TextField variant="outlined" label="Email" type={"email"} onChange={onChange} value={form.email} name="email" required />
           <TextField variant="outlined" label="Password" type={"password"} value={form.password} onChange={onChange} name="password" required />
           <MuiThemeProvider theme={myTheme}>

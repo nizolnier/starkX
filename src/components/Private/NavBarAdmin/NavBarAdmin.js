@@ -1,9 +1,10 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import logo from '../../assets/white-admin.svg'
+import logo from '../../../assets/white-admin.svg'
 import { Button } from '@material-ui/core'
-import {useStyles, Header, AdminLogo} from '../styles'
-import { goToAdmin, goToCreateTrip, goToAdminTrips } from '../../router/coordinator'
+import { Header, AdminLogo} from './styles'
+import { goToAdmin, goToCreateTrip, goToAdminTrips } from '../../../router/coordinator'
+import { useStyles } from '../../../hooks/useStyles'
 
 function NavBarAdmin() {
   const classes = useStyles()

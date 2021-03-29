@@ -1,19 +1,19 @@
 import React from 'react'
-import {Line, Center} from '../styles'
+import { Line, Center } from './styles'
 import Typography from '@material-ui/core/Typography'
 
 
 function TripInfo(props) {
   return (
     <div>
-        <Center>
+      <Center>
         <Line></Line>
         <Typography variant="h5">{props.name}</Typography>
-        </Center>
-        <p>Date: {props.date}</p>
-        <p>Description: {props.description}</p>
-        <p>Planet: {props.planet}</p>
-        <p>Duration: {props.duration} days</p>
+      </Center>
+      <p>Date: {props.date}</p>
+      <p>Description: {props.description}</p>
+      <p>Planet: {props.planet}</p>
+      <p>Duration: {props.duration} days</p>
     </div>
   );
 }

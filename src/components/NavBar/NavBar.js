@@ -1,9 +1,10 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import logo from '../assets/white-starkx.svg'
+import logo from '../../assets/white-starkx.svg'
 import { Button, MuiThemeProvider } from '@material-ui/core'
-import {myTheme, Header, StarkxLogo} from './styles'
-import { goToAboutUs, goToApply, goToTrips, goToLogin, goToHome } from '../router/coordinator'
+import { Header, StarkxLogo } from './styles'
+import { goToAboutUs, goToApply, goToTrips, goToLogin, goToHome } from '../../router/coordinator'
+import { myTheme } from '../../hooks/useStyles'
 
 function NavBar() {
   const history = useHistory()

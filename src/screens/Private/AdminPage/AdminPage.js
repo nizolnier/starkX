@@ -1,16 +1,15 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-import NavBarAdmin from '../../components/Private/NavBarAdmin'
-import TripCard from '../../components/Private/TripCard';
-import { useProtectedPage } from '../../hooks/useProtectedPage';
-import { useTripsList } from '../../hooks/useTripsList'
+import TripCard from '../../../components/Private/TripCard/TripCard';
+import { useProtectedPage } from '../../../hooks/useProtectedPage';
+import { useTripsList } from '../../../hooks/useTripsList'
+import { useStyles } from '../../../hooks/useStyles'
 import { Button, Typography } from '@material-ui/core';
-import Loading from '../../components/Loading';
+import Loading from '../../../components/Loading';
 import axios from 'axios'
-import {baseUrl} from '../../constants/urls'
-import {GridContainer, Line, CenterContainer, BlackContainer, useStyles} from '../styles'
-import { goToCreateTrip } from '../../router/coordinator';
-
+import {baseUrl} from '../../../constants/urls'
+import {GridContainer, Line, CenterContainer, BlackContainer } from './styles'
+import { goToCreateTrip } from '../../../router/coordinator';
 
 function AdminPage() {
   const classes = useStyles()
@@ -32,13 +31,12 @@ function AdminPage() {
 
   return (
     <div>
-      <NavBarAdmin />
       <BlackContainer>
         <Typography className={classes.welcome} variant="h3">Welcome!</Typography>
         <CenterContainer>
           <Line></Line>
           <Typography variant="h5">Trips</Typography>
-          <Button variant="contained" className={classes.button} onClick={() => goToCreateTrip(history)}>Create more trips</Button>
+          <Button variant="contained" className={classes.goToCreate} onClick={() => goToCreateTrip(history)}>Create more trips</Button>
         </CenterContainer>
         {loaded? <GridContainer>
           {trips.map((item) => {

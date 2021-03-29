@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from '@material-ui/core/Button';
-import { useStyles, TripCardDiv } from '../styles'
-import { goToDetails } from '../../router/coordinator';
+import { TripCardDiv } from './styles'
+import { goToDetails } from '../../../router/coordinator';
 import { useHistory } from 'react-router';
-
+import { useStyles } from '../../../hooks/useStyles'
 
 function TripCard(props) {
     const history = useHistory()
@@ -21,7 +21,7 @@ function TripCard(props) {
                     </Card.Text>
                 </Card.Body>
                 <footer>
-                    <Button className={classes.button} onClick={() => props.deleteTrip(props.id)} size="small">DELETE</Button>
+                    <Button className={classes.delete} onClick={() => props.deleteTrip(props.id)} size="small">DELETE</Button>
                 </footer>
             </Card>
         </TripCardDiv>

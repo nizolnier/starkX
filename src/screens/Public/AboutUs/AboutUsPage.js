@@ -1,6 +1,4 @@
 import React from 'react'
-import NavBar from '../../../components/NavBar'
-import Footer from '../../../components/Footer/Footer'
 import tony from '../../../assets/tony.jpg'
 import avengers from '../../../assets/avengers.png'
 import { Typography } from '@material-ui/core'
@@ -9,7 +7,6 @@ import {AboutImg, Tony, MainContainer, AboutContainer, AboutText, MemoriamContai
 function AboutUsPage() {
   return (
     <div>
-      <NavBar />
       <MainContainer>
         <Typography align="center" variant="h3" gutterBottom>
           About starkX
@@ -33,7 +30,6 @@ function AboutUsPage() {
           <Tony src={tony} />
         </MemoriamContainer>
       </MainContainer>
-      <Footer />
     </div>
   )
 }

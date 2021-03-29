@@ -1,9 +1,10 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import { Button, MuiThemeProvider } from '@material-ui/core'
-import {myTheme, CardPublic} from './styles'
-import { goToApply } from '../router/coordinator';
+import { myTheme } from '../../hooks/useStyles'
+import { goToApply } from '../../router/coordinator'
+import { CardPublic } from './styles'
 
 function TripCard(props) {
   const history = useHistory()
